@@ -1,11 +1,9 @@
 import { useEffect } from "react";
+import { IoMdMore } from "react-icons/io";
 
 
-const RollingPaper = () =>  {
-    const [className, setClassName] = useState('');
-    const [messages, setMessages] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState('');
+const RollingPaperDetail = () =>  {
+    const [paper, setPaper] = useState([]);
 
     useEffect(() => {
         
@@ -13,7 +11,7 @@ const RollingPaper = () =>  {
             try {
                 setLoading(true);
                 const response = await fetch('/api/rollingPapers/${studentId}') 
-            } catch {
+            } catch { 
                 
             }
         };
@@ -21,7 +19,10 @@ const RollingPaper = () =>  {
 
     return (
         <div>
-            <h2>{className}</h2>
+            <IoMdMore />
+            <p>{paper[i]}</p>
         </div>
     )
 }
+
+export default RollingPaperDetail

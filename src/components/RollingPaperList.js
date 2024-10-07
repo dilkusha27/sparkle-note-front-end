@@ -4,8 +4,7 @@ const RollingPaperList = () => {
 
     const [rollingPager, setRollingPager] = useState([]);
     const [classCode, setClassCode] = useState([]);
-    const [className, setClassName] = useState([]);
-
+    
     const updateRollingPaperName = () => {
 
     };
@@ -26,8 +25,8 @@ const RollingPaperList = () => {
                 <br />
                 <div>
                     <p>학급코드 : {classCode}</p>
-                    <button onClick={updateClassName}>수정</button>
-                    <button onClick={deleteClass}>삭제</button>
+                    <button onClick={updateRollingPaperName}>수정</button>
+                    <button onClick={deleteRollingPaper}>삭제</button>
                 </div>
             </div>
             <div>
