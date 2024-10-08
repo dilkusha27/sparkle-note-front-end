@@ -1,15 +1,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './styles/App.css';
 import LoginPage from './pages/LoginPage';
+import StudentSigninPage from './pages/StudentSigninPage';
+import MyPage from './pages/MyPage';
+import RollingPaperPage from './pages/RollingPaperPage';
 
 function App() {
   return (
     <div className="app-container">
       <BrowserRouter>
         <Routes>
-          <Route path="/loginPage" element={<LoginPage />} />
-          {/* <Route path="/roll" element={<HomePage />} />
-          <Route path="/papers" element="" /> */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/studentSignin" element={<StudentSigninPage />} />
+          <Route path="/myPage" element={<MyPage />} />
+          <Route path="/rollingPagerPage" element={<RollingPaperPage />} />
         </Routes>
       </BrowserRouter>
     </div>

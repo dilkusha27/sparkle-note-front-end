@@ -5,7 +5,7 @@ const TeacherHeader = () => {
     const [teacherName, setTeacherName] = useState('');
     
     const teacherlogout = () => {
-
+        // 소셜로그인을 로그아웃하는 로직 필요
     };
 
     return (

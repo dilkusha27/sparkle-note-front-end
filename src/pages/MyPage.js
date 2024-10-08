@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import TeacherHeader from "../components/TeacherHeader";
 import RollingPaperList from "../components/RollingPaperList";
 
-const TeacherPage = () => {
+const MyPage = () => {
 
     return (
         <div>
@@ -13,4 +13,4 @@ const TeacherPage = () => {
     
 };
 
-export default TeacherPage;
+export default MyPage;

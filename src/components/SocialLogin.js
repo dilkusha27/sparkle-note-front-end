@@ -24,6 +24,8 @@ const SocialLogin = () => {
             </div>
         </div>
     )
+
+    // 소셜로그인 후에 /pages/TeacherPage로 넘어갈 수 있도록 해야 함
 }
 
 export default SocialLogin;

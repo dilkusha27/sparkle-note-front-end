@@ -8,6 +8,8 @@ const StudentSignin = () => {
     
     const handleSignin = (e) => {
         e.preventDefault();
+        // URL로 해당 링크로 입장한 후에 className에 할당된 classCode를 입력해야 들어갈 수 있도록 해야 함
+        // 롤링페이퍼 참여 버튼 눌렀을 때 /pages/RollingPaperDetail로 이동해야 함
     }
 
     return(

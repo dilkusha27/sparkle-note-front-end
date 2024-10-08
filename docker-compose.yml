@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  mysql-db:
+    image: mysql:8.0  # MySQL 이미지
+    ports:
+      - "3306:3306"  # MySQL 접속 포트
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: sparkle-note  # 초기 데이터베이스 설정
+    volumes:
+      # 초기화 스크립트 및 설정 파일 경로
+      - ./db/initdb.d:/docker-entrypoint-initdb.d  # 초기 DB 스크립트
+      - ./db/my.cnf:/etc/mysql/my.cnf  # MySQL 설정 파일
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      interval: 10s
+      timeout: 15s
+      retries: 5
